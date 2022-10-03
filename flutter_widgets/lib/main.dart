@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: Home(),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Flutter Widgets')),
+        body: const Home(),
+      ),
     );
   }
 }
