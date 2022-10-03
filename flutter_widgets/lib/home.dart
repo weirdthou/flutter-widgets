@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Home extends StatefulWidget {
+  Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedValue = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +47,28 @@ class Home extends StatelessWidget {
                           },
                         ),
                       ],
+                    ),
+                    ListTile(
+                      leading: Radio(
+                          value: 1,
+                          groupValue: _selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedValue = value as int;
+                            });
+                          }),
+                      title: const Text('One'),
+                    ),
+                    ListTile(
+                      leading: Radio(
+                          value: 2,
+                          groupValue: _selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              _selectedValue = value as int;
+                            });
+                          }),
+                      title: const Text('Two'),
                     ),
                   ],
                 ),
