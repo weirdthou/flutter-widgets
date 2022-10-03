@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: const Text('Flutter Widgets')),
-        body: const Home(),
+        body: Home(),
         drawer: Drawer(
           backgroundColor: Colors.pinkAccent,
           child: ListView(
