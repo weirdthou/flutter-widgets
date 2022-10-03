@@ -10,10 +10,11 @@ class Home extends StatelessWidget {
         child: const Text('showBottomSheet'),
         onPressed: () {
           Scaffold.of(context).showBottomSheet<void>(
+            enableDrag: true,
             (BuildContext context) {
               return Container(
                 height: 200,
-                color: Colors.amber,
+                color: Colors.white,
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
