@@ -9,8 +9,9 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Widgets'),
       ),
-      body: const Center(
-        child: Text('Hello World'),
+      body: Center(
+        child:
+            TextButton(onPressed: () {}, child: const Text('Open BottomSheet')),
       ),
     );
   }
